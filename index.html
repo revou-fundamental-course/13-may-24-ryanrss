@@ -4,6 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <section class="header">
+      <h1 class="title">Welcome to Katik</h1>
+      <p class="desc">
+        Hai Sobat , Selamat datang di Katik :] <br />
+        Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan
+        keliling bangun datar
+      </p>
+      <div class="buttongroup">
+        <button class="btn active">Segitiga</button>
+        <button class="btn">Jajargenjang</button>
+      </div>
+    </section>
+    <section class="body">
+      <div class="selector">
+        <button>Luas</button>
+        <button>Keliling</button>
+      </div>
+      <div class="luas">
+        <label for="">Alas</label>
+        <input type="number" id="alas" />
+        <label for="">Tinggi</label>
+        <input type="number" id="tinggi" />
+        <button onclick="hitungLuas('luas')">Hitung</button>
+      </div>
+      <div class="keliling">
+        <label for="">Alas</label>
+        <input type="number" id="alas" />
+        <label for="">Tinggi</label>
+        <input type="number" id="tinggi" />
+        <button onclick="hitungLuas('keliling')">Hitung</button>
+      </div>
+    </section>
+    <section class="footer"></section>
+    <script src="js/script.js"></script>
+  </body>
 </html>
