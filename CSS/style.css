@@ -2,7 +2,9 @@
   color: black;
   font-family: sans-serif;
 }
-
+hr {
+  width: 100%;
+}
 .header {
   margin-left: 5%;
   margin-right: 5%;
@@ -57,4 +59,66 @@
   height: 25px;
 
   border-radius: 5px;
+}
+.body .selector button.active {
+  background-color: rgb(0, 132, 193);
+  width: 60px;
+  height: 25px;
+
+  border-radius: 5px;
+}
+.card {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 8px;
+}
+.card .title {
+  text-align: center;
+  line-height: 50px;
+  vertical-align: middle;
+  background-color: rgb(0, 132, 193);
+  height: 50px;
+  font-weight: 900;
+  font-size: larger;
+  color: white;
+}
+.card .img {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.soal {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.card .desc p {
+  text-align: start;
+}
+.card .desc h2 {
+  text-align: center;
+}
+.calculator input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px rgb(193, 193, 193) solid;
+  height: 30px;
+  border-radius: 7px;
+}
+.calculator button {
+  border: 1px rgb(193, 193, 193) solid;
+  background-color: rgb(0, 132, 193);
+  height: 40px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+}
+.calculator button:hover {
+  background-color: rgb(0, 151, 221);
+}
+
+#hitungKel {
+  display: none;
 }
