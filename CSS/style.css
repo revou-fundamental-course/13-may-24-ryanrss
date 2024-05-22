@@ -64,32 +64,28 @@ hr {
   border: 1px rgba(0, 0, 0, 0.192) solid;
   padding: 10px;
 }
-.body .selector button {
-  border: 0;
-  background-color: white;
-  width: 60px;
-  height: 25px;
-  font-weight: 600;
+
+.body .selector {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
 }
-.body .selector button:hover {
-  background-color: rgb(0, 132, 193);
-  width: 60px;
-  height: 25px;
-  color: white;
-  border-radius: 5px;
+.body .selector .btn {
+  width: 100%;
+  font-weight: 550;
 }
+
 /* style applied when triggered by javascript event by adding active class */
-.body .selector button.active {
+.body .selector .btn.active,
+.body .selector .btn:hover {
   background-color: rgb(0, 132, 193);
-  width: 60px;
-  height: 25px;
   color: white;
-  border-radius: 5px;
 }
 .card {
-  margin-top: 2%;
+  margin-top: 0;
   margin-bottom: 2%;
-  border-radius: 8px;
 }
 .card .title {
   text-align: center;
@@ -108,9 +104,11 @@ hr {
   font-size: larger;
 }
 .card .img {
-  margin: auto;
-  width: 50%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.card .img img {
+  width: 300px;
 }
 .soal {
   margin: auto;
@@ -136,8 +134,15 @@ hr {
   height: 30px;
   border-radius: 7px;
 }
+/* reset button */
+.body .submitgroup {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 30px;
+}
 /* calculate button */
-.calculator button {
+.submitgroup button {
   border: 1px rgb(193, 193, 193) solid;
   background-color: rgb(0, 132, 193);
   height: 40px;
@@ -145,25 +150,10 @@ hr {
   color: white;
   padding: 10px;
   font-size: large;
-  margin: 0 auto;
-}
-/* reset button */
-.body .reset {
-  display: flex;
-  justify-content: end;
-  align-items: center;
+  margin: 3px;
 }
 button.reset {
-  border: 1px rgb(193, 193, 193) solid;
   background-color: rgb(228, 167, 0);
-  height: 40px;
-  border-radius: 6px;
-  color: white;
-  padding: 10px;
-  font-size: large;
-  text-align: center;
-
-  margin-bottom: 30px;
 }
 /* default kel invisible */
 #hitungKel {
@@ -193,4 +183,29 @@ button:hover {
 .footer p {
   color: rgb(193, 217, 254);
   font-weight: 500;
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .card .img img {
+    width: 200px;
+  }
+  .body .selector {
+    flex-direction: column;
+    height: 80px;
+  }
+
+  .submitgroup {
+    flex-direction: column;
+  }
+  .submitgroup button {
+    width: 100%;
+  }
 }

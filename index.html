@@ -23,10 +23,16 @@
     <section class="body">
       <div class="selector">
         <!-- switchCalc for switching between luas and keliling calculator -->
-        <button onclick="switchCalc('luas')" class="active" id="luasbtn">
+        <div onclick="switchCalc('luas')" class="btn active" id="luasbtn">
+          Luas
+        </div>
+        <div onclick="switchCalc('keliling')" class="btn" id="kelbtn">
+          Keliling
+        </div>
+        <!-- <button onclick="switchCalc('luas')" class="active" id="luasbtn">
           Luas
         </button>
-        <button onclick="switchCalc('keliling')" id="kelbtn">Keliling</button>
+        <button onclick="switchCalc('keliling')" id="kelbtn">Keliling</button> -->
       </div>
       <!-- luas view -->
       <div class="luas" id="hitungLuas">
@@ -51,9 +57,6 @@
             <label for="">Tinggi</label>
             <input type="number" id="tinggi" placeholder="Nilai Tinggi" />
             <div id="result1"></div>
-            <!-- trigger calculate function related current calculation by passing isActive state -->
-
-            <button onclick="calculate(isActive)">Hitung</button>
           </div>
         </div>
       </div>
@@ -85,12 +88,11 @@
             <label for="">S3</label>
             <input type="number" id="s3" placeholder="Nilai S3" />
             <div id="result2"></div>
-            <!-- trigger calculate function related current calculation by passing isActive state -->
-            <button onclick="calculate(isActive)">Hitung</button>
           </div>
         </div>
       </div>
-      <div class="reset">
+      <div class="submitgroup">
+        <button onclick="calculate(isActive)" class="hitung">Hitung</button>
         <button onclick="resetField(isActive)" class="reset">Reset</button>
       </div>
     </section>

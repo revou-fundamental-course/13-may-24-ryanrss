@@ -60,15 +60,15 @@ const switchCalc = (tipe) => {
   if (tipe != isActive) {
     if (!hasClass(luasBtn, "active")) {
       // condition if luasbtn is inactive
-      luasBtn.className = "active";
-      kelBtn.className = "";
+      luasBtn.className = "btn active";
+      kelBtn.className = "btn";
       isActive = "luas";
       hitungKel.style.display = "none";
       hitungLuas.style.display = "block";
     } else {
       //condition meet else
-      kelBtn.className = "active";
-      luasBtn.className = "";
+      kelBtn.className = "btn active";
+      luasBtn.className = "btn";
       isActive = "keliling";
       hitungKel.style.display = "block";
       hitungLuas.style.display = "none";
